@@ -4,13 +4,53 @@ const inquirer = require('inquirer');
 const markdown = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
 const questions = [
-    "What is your project title?",
-    "Describe your app's functionality.",
-    "What are the installation instructions for your app?",
-    "Describe how to use your app.",
-    "List any contributors to your app.",
-    "What testing procedures do you have?",
-    "What license are you using?",
+    {
+    type: 'input',
+    message: 'What is your project title?',
+    name: 'title',
+    },
+    {
+    type: 'input',
+    message: "Describe your app and its functionality.",
+    name: 'description',
+    },
+    {
+    type: 'input',
+    message: "What are your app's installation instructions?",
+    name: 'installation',
+    },
+    {
+    type: 'input',
+    message: "Describe how to use your app.",
+    name: 'usage',
+    },
+    {
+    type: 'input',
+    message: "Who were the other contributors to your app?",
+    name: 'contributors',
+    },
+    {
+    type: 'input',
+    message: "Explain any necessary tests.",
+    name: 'tests',
+    },
+    {
+    type: 'checkbox',
+    message: 'Choose a license for your app.',
+    name: 'license',
+    choices: [
+        'MIT', 'ISC','Unlicense', 'zLib',
+    ],},
+    {
+    type: 'input',
+    message: "Enter your Github username.",
+    name: 'github',
+    },
+    {
+    type: 'input',
+    message: "Enter your email address.",
+    name: 'email',
+    },
 ];
 
 // TODO: Create a function to write README file
@@ -27,56 +67,6 @@ function init() {
 // Function call to initialize app
 init();
 
-inquirer.prompt([
-    {
-      type: 'input',
-      message: 'What is your project title?',
-      name: 'title',
-    },
-    {
-      type: 'input',
-      message: "Describe your app and its functionality.",
-      name: 'description',
-    },
-    {
-        type: 'input',
-        message: "What are your app's installation instructions?",
-        name: 'installation',
-    },
-    {
-        type: 'input',
-        message: "Describe how to use your app.",
-        name: 'usage',
-    },
-    {
-        type: 'input',
-        message: "Who were the other contributors to your app?",
-        name: 'contributors',
-    },
-    {
-        type: 'input',
-        message: "Explain any necessary tests.",
-        name: 'tests',
-    },
-    {
-      type: 'checkbox',
-      message: 'Choose a license for your app.',
-      name: 'license',
-      choices: [
-        'MIT', 'ISC','Unlicense', 'zLib',
-      ],
-    },
-    {
-        type: 'input',
-        message: "Enter your Github username.",
-        name: 'github',
-    },
-    {
-        type: 'input',
-        message: "Enter your email address.",
-        name: 'email',
-    },
-  ])
-  .then((data) => {console.log(data);
-
-fs.writeFile('readme.txt', JSON.stringify(data, null,), (err) => err ? console.error(err) : console.log("No problems"))});
+inquirer.prompt([])
+.then((data) => {console.log(data);
+    fs.writeFile('readme.txt', JSON.stringify(data, null,), (err) => err ? console.error(err) : console.log("No problems"))});
