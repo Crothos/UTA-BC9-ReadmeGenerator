@@ -66,7 +66,17 @@ inquirer.prompt([
         'MIT', 'ISC','Unlicense', 'zLib',
       ],
     },
+    {
+        type: 'input',
+        message: "Enter your Github username.",
+        name: 'github',
+    },
+    {
+        type: 'input',
+        message: "Enter your email address.",
+        name: 'email',
+    },
   ])
   .then((data) => {console.log(data);
 
-fs.writeFile('log.txt', JSON.stringify(data, null,), (err) => err ? console.error(err) : console.log("No problems"))});
+fs.writeFile('readme.txt', JSON.stringify(data, null,), (err) => err ? console.error(err) : console.log("No problems"))});

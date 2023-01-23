@@ -1,1 +1,0 @@
-{"title":"Flash App","description":"This app allows users to create custom flash cards.","installation":"None available.","usage":"Use your mouse and keyboard.","contributors":"No other contributors.","tests":"No necessary tests.","license":["MIT"]}
