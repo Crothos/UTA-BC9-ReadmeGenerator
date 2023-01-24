@@ -10,13 +10,13 @@
 * [License](#license)
 
 ## Description
-This app allows you to do stuff.
+This app was designed to be a flashcard helper app for students, teachers, and parents.
 
 ## Usage
-Have a blast with it.
+Use the buttons on the left to use pre-determined flashcards or create your own in the custom form section.
 
 ## Installation
-None.
+There are no installation instructions.
 
 ## Contribution
 undefined
@@ -28,4 +28,4 @@ s.g.totten@gmail.com
 [crothos](https://github.com/crothos)
 
 ## License
-This project is licensed under the: MIT license.
+This project is licensed under the MIT license.
