@@ -20,7 +20,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== "None")  {
-    return `## License\nThis project is licensed under the: ${license} license.`
+    return `## License\nThis project is licensed under the ${license} license.`
 }
 return " ";
 }
@@ -29,11 +29,13 @@ return " ";
 function generateMarkdown(data) {
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}
+
 ## Table of Contents
-* [Project Description](#Description)
-* [Usage](#Usage)
-* [Contribution](#Contribution)
-* [Installation](#Installation)
+
+- [Project Description](#description)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Installation](#installation)
 ${renderLicenseLink(data.license)}
 
 ## Description
@@ -52,7 +54,7 @@ ${data.contribution}
 ### Send questions to this email:
 ${data.email}
 ### You can also contact me via Github:
-${data.github}
+[${data.github}](https://github.com/${data.github})
 
 ${renderLicenseSection(data.license)}
 `;
