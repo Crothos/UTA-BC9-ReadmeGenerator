@@ -16,6 +16,7 @@ Using node, create a custom README file from prompts to the user.
 
 ## Usage
 When index.js is run in node, a series of questions will appear one at a time. Answer the questions in the terminal, and use the keyboard to choose your license at the end. Fill in your GitHub username and email, and the generator will automatically create a custom README file called ReadmeCustom.md, populating it with your information!
+- [Watch the app in action (VIDEO)](https://drive.google.com/file/d/1_EvbYQuXYyGqJ0XFQQyWLr36EQCv-rog/view)
 
 ## Installation
 - [Requires node installation.](https://nodejs.org/en/download/)
